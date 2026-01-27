@@ -3,7 +3,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "otletlada";
+$dbname = "esport";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -45,7 +45,7 @@ if (array_search($email, $arrayEmail)) {
   VALUES ('$fnev', '$vnev', '$knev', '$email', '$jelszo1', '$tfon', '$szdatum')";
   if ($conn->query($sql) === TRUE) {
     echo "Sikeres regisztráció";
-    header('Location: ../index.html');
+    header('Location: ../index.php');
     exit;
   } else {
     echo "Hiba: " . $sql . "<br>" . $conn->error;
