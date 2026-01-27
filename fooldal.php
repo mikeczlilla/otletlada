@@ -43,8 +43,8 @@ if (!$conn) {
         </div>
         <button type="submit" id="kuldes" class="btn btn-success">Küldés</button>
       </form>
-      <form action="">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <form action="" style="width: fit-content;">
+        <button type="button" id="kilepes" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Kilépés
         </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

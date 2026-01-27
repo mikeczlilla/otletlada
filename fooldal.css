@@ -34,3 +34,23 @@ body {
   margin-right: auto;
   margin-top: 20px;
 }
+#kilepes{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 795px;
+}
+@media (width < 600px) {
+  .card {
+    width: fit-content;
+  }
+
+}
+@media (width < 900px) {
+  #kilepes{
+    position: unset;
+  }
+  
+}
