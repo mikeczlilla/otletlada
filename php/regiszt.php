@@ -3,7 +3,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "esport";
+$dbname = "otletlada";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
