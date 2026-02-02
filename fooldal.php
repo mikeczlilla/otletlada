@@ -35,10 +35,10 @@ if (!$conn) {
 
   <div class="card">
     <div class="card-body">
-      <form id="form1" action="">
-        <div class="input-group">
+      <form id="form1" action="php/otletlada.php">
+        <div class="input-group" id="txtarea">
           <span class="input-group-text">Írd be az ötleted: </span>
-          <textarea id="otlet" class="form-control" aria-label="With textarea"></textarea>
+          <textarea name="otlet" id="otlet" class="form-control" aria-label="With textarea"></textarea>
 
         </div>
         <button type="submit" id="kuldes" class="btn btn-success">Küldés</button>

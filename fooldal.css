@@ -44,13 +44,26 @@ body {
 }
 @media (width < 600px) {
   .card {
-    width: fit-content;
+    max-width: 600px;
+  }
+  #txtarea{
+    width: max-content;
   }
 
 }
 @media (width < 900px) {
+  .card {
+    max-width: 600px;
+  }
+  #txtarea{
+    width: 400px;;
+  }
   #kilepes{
     position: unset;
   }
-  
+  #kuldes{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
 }
