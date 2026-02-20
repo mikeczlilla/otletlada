@@ -35,7 +35,7 @@ if (!$conn) {
 
   <div class="card">
     <div class="card-body">
-      <form id="form1" action="php/otletlada.php">
+      <form id="form1" method="post" action="php/otletlada.php">
         <div class="input-group" id="txtarea">
           <span class="input-group-text">Írd be az ötleted: </span>
           <textarea name="otlet" id="otlet" class="form-control" aria-label="With textarea"></textarea>
@@ -63,6 +63,39 @@ if (!$conn) {
       </form>
     </div>
   </div>
+
+
+  <div class="card">
+    <div class="card-body">
+      <h2 style="text-align: center;">Ötletek:</h2>
+      <form action="">
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "esport";
+
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        if (!$conn) {
+          die('Database connection failed.');
+        }
+
+        $sql = "SELECT felhasznalok.fnev, otletek.otlet FROM felhasznalok INNER JOIN otletek ON felhasznalok.id = otletek.user_id";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while ($row = $result->fetch_assoc()) {
+            echo "<span style='color: #a2d6f9'> <b>" . $row['fnev'] . ": </b> </span>" . $row['otlet'] . "<br>";
+          }
+        }
+        ?>
+
+      </form>
+    </div>
+  </div>
+
+
 </body>
 
 </html>
