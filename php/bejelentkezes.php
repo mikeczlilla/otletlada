@@ -1,7 +1,4 @@
 <?php
-
-use const Dom\NOT_FOUND_ERR;
-
 session_start();
 $servername = "localhost";
 $username = "root";
